@@ -25,5 +25,5 @@ wrapt==1.14.0
 #xgboost==1.5.2
 zipp==3.7.0
 Jinja2==2.11.3
-itsdangerous==1.1.0
-MarkupSafe==1.1.1
+itsdangerous
+MarkupSafe
