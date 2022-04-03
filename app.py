@@ -5,15 +5,16 @@ import time
 import os
 import cv2
 import numpy as np
-import tensorflow as tf
 import pickle, joblib
 from PIL import Image
 from flask import Flask, jsonify, request
 from prep_image_module import prep_img
-from sklearn import preprocessing
-le = preprocessing.LabelEncoder()
-VGG_model  = tf.keras.models.load_model('VGG_model.h5')
-model = joblib.load('XGBOOST.pkl')
+from keras.models import load_model
+import h5py
+
+#VGG_model  = tf.keras.models.load_model('VGG_model.h5')
+VGG_model = load_model('INCEPTION.h5')
+model = joblib.load('RF_CLASSIFIER.pkl')
 
 # def prepare_image(img):
 #     img = Image.open(io.BytesIO(img))
