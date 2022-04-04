@@ -48,12 +48,13 @@ def infer_image():
     if 'file' not in request.files:
         return "Please try again. The Image doesn't exist"
     
-    file = request.files.get('file')
+#     file = request.files.get('file')
+    file = request.get_json()
 
     if not file:
         return
 
-    img_bytes = file
+    img_bytes = file['file']
     img = prep_img(img_bytes)
 
     return jsonify(prediction=predict(img))
