@@ -63,7 +63,7 @@ def infer_image():
 
 @app.route('/', methods=['GET'])
 def index():
-    return 'Machine Learning Inference'
+    return 'Cataract Detection Using Deep Learning'
 
 
 if __name__ == '__main__':
