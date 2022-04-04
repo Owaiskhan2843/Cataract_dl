@@ -9,13 +9,16 @@ def prep_img(img):
     import time
     import os
     import numpy as np
+    from io import BytesIO
+    import base64
     from PIL import Image
     import math
     size=100
     hei=[]
     wei=[]
     c=0
-    img = Image.open(io.BytesIO(img))
+#     img = Image.open(io.BytesIO(img))
+    img = Image.open(BytesIO(base64.b64decode(img)))
     # img = img.resize((256, 256))
     img = np.array(img, dtype='uint8')
     # img = np.expand_dims(img, 0)
