@@ -55,7 +55,7 @@ def infer_image():
 #     if not file:
 #         return
 
-    img_bytes = file['file']
+    img_bytes = file
     img = prep_img(img_bytes)
 
     return jsonify(prediction=predict(img))
