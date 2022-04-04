@@ -50,7 +50,7 @@ def infer_image():
 #         return "Please try again. The Image doesn't exist"
     
 #     file = request.files.get('file')
-    file = request.json
+    file = request.form.get('file')
 
 #     if not file:
 #         return
