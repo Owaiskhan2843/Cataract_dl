@@ -20,7 +20,7 @@ def prep_img(img):
 #     img = Image.open(io.BytesIO(img))
 #     img = Image.open(BytesIO(base64.b64decode(img)))
     starter = img.find(',')
-    img = file[starter+1:]
+    img = img[starter+1:]
     img = Image.open(io.BytesIO(base64.decodebytes(bytes(img, "utf-8")))).convert('RGB')
     # img = img.resize((256, 256))
     img = np.array(img, dtype='uint8')
