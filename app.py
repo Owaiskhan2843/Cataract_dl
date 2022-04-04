@@ -52,8 +52,8 @@ def infer_image():
 #     file = request.files.get('file')
     file = request.get_json()
 
-    if not file:
-        return
+#     if not file:
+#         return
 
     img_bytes = file['file']
     img = prep_img(img_bytes)
