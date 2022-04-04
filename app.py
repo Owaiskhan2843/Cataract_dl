@@ -46,7 +46,7 @@ app = Flask(__name__)
 @app.route('/predict', methods=['POST'])
 def infer_image():
 #     if 'file' not in request.files:
-      if !request.is_json
+      if request.is_json == False:
         return "Please try again. The Image doesn't exist"
     
 #     file = request.files.get('file')
