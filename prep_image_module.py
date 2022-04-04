@@ -18,7 +18,8 @@ def prep_img(img):
     wei=[]
     c=0
 #     img = Image.open(io.BytesIO(img))
-    img = Image.open(BytesIO(base64.b64decode(img)))
+#     img = Image.open(BytesIO(base64.b64decode(img)))
+    img = Image.open(io.BytesIO(base64.decodebytes(bytes(img, "utf-8"))))
     # img = img.resize((256, 256))
     img = np.array(img, dtype='uint8')
     # img = np.expand_dims(img, 0)
